@@ -44,11 +44,18 @@ self.like = function(data) {
     return likes
 }
 
-self.add = function(){
-const saraza = self.contenido.length
-const buscarId = self.contenido[saraza - 1].id
+self.add = function(data){
+    const saraza = contenido.length
+    const buscarId = contenido[saraza - 1].id
 
-return add
+    contenido.push({
+        titulo: data.titulo,
+        imagen: data.imagen,
+        id: buscarId + 1,
+        like: 0
+    })
+
+return contenido
 
 } 
 
